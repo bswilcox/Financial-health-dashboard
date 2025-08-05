@@ -1,107 +1,85 @@
+# 📊 Financial Health Dashboard
 
-# Financial Health Dashboard
-
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+A data-driven project that analyzes the financial health of major companies using key financial ratios, time-series visualizations, and interactive dashboards. Built with Python, Pandas, Plotly, and Tableau.
 
 ---
 
-## Project Overview
-
-This project analyzes the financial health of major companies across three sectors by collecting, cleaning, and visualizing their financial statements over multiple years. Using Python and Tableau, it extracts key financial ratios to provide insights into profitability, liquidity, and leverage.
-
----
-
-## Data Sources
-
-- Financial statements downloaded using the [yfinance](https://pypi.org/project/yfinance/) Python library.
-- Companies analyzed: Apple (AAPL), JPMorgan Chase (JPM), and Johnson & Johnson (JNJ).
-
----
-
-## Repository Structure
+## 📁 Project Structure
 
 financial-health-dashboard/
 ├── data/
-│ ├── raw/ # Raw downloaded CSVs from yfinance
-│ └── cleaned/ # Cleaned and processed data ready for analysis
+│ ├── raw/ # Original financial statements from APIs/sources
+│ └── cleaned/ # Cleaned CSVs (e.g., AAPL_balance_sheet_clean.csv)
 ├── notebooks/
-│ ├── 01_ingestion_and_cleaning.ipynb # Data ingestion and cleaning scripts
-│ ├── 02_eda_and_metrics.ipynb # Financial ratios calculation and EDA
-│ └── 03_visualizations.ipynb # Interactive visualizations with Plotly
+│ ├── 01_ingestion_and_cleaning.ipynb
+│ ├── 03_eda_and_metrics.ipynb
+│ └── 04_visualizations.ipynb
 ├── dashboard/
-│ └── tableau_dashboard.twbx # Tableau dashboard workbook
+│ └── tableau_dashboard.twbx
+├── sql/ # Optional SQL modeling (if needed)
+│ ├── create_tables.sql
+│ └── financial_ratios.sql
 ├── README.md
 ├── requirements.txt
-└── presentation.pdf
-
-yaml
-Copy
-Edit
+└── presentation.pdf # (Optional) Slide deck summarizing key insights
 
 ---
 
-## Getting Started
+## 📌 Key Features
 
-### Prerequisites
+- 📥 **Data Ingestion**: Pulls and parses raw balance sheets, income statements, and cash flow data.
+- 🧹 **Data Cleaning**: Standardizes date formats, removes missing values, and formats numerical values.
+- 📈 **Ratio Calculation**: Computes financial health ratios like:
+  - Current Ratio
+  - Debt-to-Equity
+  - Return on Equity
+  - Gross Margin, etc.
+- 📊 **Visualizations**: Interactive Plotly graphs comparing companies over time.
+- 📉 **Tableau Dashboard**: Clean, intuitive summary of financial metrics.
 
-- Python 3.8 or higher
-- Recommended: a Jupyter notebook environment (e.g., JupyterLab, VS Code, or Google Colab)
+---
 
-### Installation
+## 🏗 Technologies Used
 
-1. Clone the repository:
+- **Python** (Pandas, Plotly, NumPy)
+- **Jupyter Notebooks**
+- **Tableau**
+- **Git & GitHub**
+- *(Optional)* SQL for modeling
 
-```bash
-git clone https://github.com/your-username/financial-health-dashboard.git
-cd financial-health-dashboard
-Install required packages:
+---
 
-bash
-Copy
-Edit
+## 🧠 Insights & Storytelling
+
+> Coming soon: A full data story outlining how AAPL, JPM, and JNJ compare across financial ratios over time, and what trends suggest about their financial health.
+
+---
+
+## 🧰 Setup Instructions
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/bswilcox/financial-health-dashboard.git
+   cd financial-health-dashboard
+Create a virtual environment (optional but recommended):
+
+
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+Install dependencies:
+
+
 pip install -r requirements.txt
-Usage
-Run the notebooks sequentially to reproduce the analysis and visualizations:
+Run the notebooks in order:
 
-Data Ingestion and Cleaning:
-notebooks/01_ingestion_and_cleaning.ipynb
-Downloads raw financial data using yfinance and cleans it.
+01_ingestion_and_cleaning.ipynb
 
-Exploratory Data Analysis and Metrics:
-notebooks/02_eda_and_metrics.ipynb
-Calculates key financial ratios and performs exploratory analysis.
+03_eda_and_metrics.ipynb
 
-Visualizations:
-notebooks/03_visualizations.ipynb
-Creates interactive charts to explore financial health trends.
+04_visualizations.ipynb
 
-Key Financial Ratios Included
-Net Profit Margin
+📬 Contact
+Created by Brennon Wilcox — feel free to reach out!
 
-Return on Equity (ROE)
 
-Debt to Equity Ratio
-
-Current Ratio
-
-Insights
-For a detailed analysis of the financial data and key findings, see the INSIGHTS.md file or the presentation.pdf.
-
-Skills Demonstrated
-Data scraping with Python and yfinance
-
-Data cleaning and transformation with pandas
-
-Financial ratio calculation and analysis
-
-Interactive visualization with Plotly Express
-
-Dashboard creation with Tableau
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contact
-Created by [Brennon Wilcox] - feel free to reach out via [brennonsw@gmail.com].
-
+---
